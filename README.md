@@ -5,9 +5,9 @@
 Modified from [xiaolonw/caffe-video_triplet](https://github.com/xiaolonw/caffe-video_triplet), update the source code to fit the new verison of [BVLC/caffe](https://github.com/BVLC/caffe).   
 
 Details:   
-1. add **pair_size** parameter for image_data_layer to shuffle training example in pair. Normally, pair_size = 2.   
+1. add **pair_size** parameter for image_data_layer to shuffle training examples in each pair_size. Normally, pair_size = 2.   
 
-in the prototxt:  
+    in the prototxt:  
 ```
 layer {
   name: "data"
@@ -35,7 +35,7 @@ layer {
     norm_layer.hpp    
 
 ### Usage
-In the prototxt  
+    In the prototxt  
 ```
 layer {
   name: "triplet-loss"
@@ -51,5 +51,6 @@ layer {
   bottom: "label"
 } 
 ```  
+**Attention**
 When training models with the CASIA-WebFace dataset，trying to  set margin = 0.1 or 0.2.   
 In my experiments,  when margin = 1, the loss didn't converge at all. 
