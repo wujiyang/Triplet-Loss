@@ -2,11 +2,11 @@
 
 ### Introduction  
 
-Modified from [xiaolonw/caffe-video_triplet](https://github.com/xiaolonw/caffe-video_triplet), update the source code to  
-fit the new verison of [BVLC/caffe](https://github.com/BVLC/caffe).   
+Modified from [xiaolonw/caffe-video_triplet](https://github.com/xiaolonw/caffe-video_triplet), update the source code to fit the new verison of [BVLC/caffe](https://github.com/BVLC/caffe).   
 
 Details:   
-1. add ##pair_size## parameter for image_data_layer to shuffle training example in pair. Normally, pair_size = 2.  
+1. add **pair_size** parameter for image_data_layer to shuffle training example in pair. Normally, pair_size = 2.   
+
 in the prototxt:  
 ```
 layer {
@@ -29,7 +29,10 @@ layer {
   }
 }   
 ```  
-2. add ##.hpp## file for norm_layer and rank_hard_loss layer   
+2. add **.hpp** files for norm_layer and rank_hard_loss layer  
+
+rank_hard_loss_layer.hpp  
+norm_layer.hpp    
 
 ### Usage
 In the prototxt  
@@ -48,5 +51,5 @@ layer {
   bottom: "label"
 } 
 ```  
-when training model with the CASIA-WebFace， trying to  set margin = 0.1 or 0.2.   
-In my experiments, when margin = 1,the loss didn't converge at all. 
+When training models with the CASIA-WebFace dataset，trying to  set margin = 0.1 or 0.2.   
+In my experiments,  when margin = 1, the loss didn't converge at all. 
