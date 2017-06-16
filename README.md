@@ -29,7 +29,7 @@ layer {
   }
 }   
 ```  
-2. add **.hpp** files for norm_layer and rank_hard_loss layer  
+2. add **.hpp** files for **norm_layer** and **rank_hard_loss_layer**  
 
     rank_hard_loss_layer.hpp  
     norm_layer.hpp    
