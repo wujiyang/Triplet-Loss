@@ -51,6 +51,7 @@ layer {
   bottom: "label"
 } 
 ```  
-**Attention**
+**Attention:**   
+
 When training models with the CASIA-WebFace dataset，trying to  set margin = 0.1 or 0.2.   
 In my experiments,  when margin = 1, the loss didn't converge at all. 
